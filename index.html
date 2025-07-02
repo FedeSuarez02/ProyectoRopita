@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vintage Obscuro</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>Raven Vintage</h1>
+        <nav>
+            <ul>
+                <a href="carrito.html" class="btn-carrito">
+                    <img src="/assets/Carrito (2).png" alt="Carrito" />
+                </a>
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Productos ▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Remeras</a></li>
+                        <li><a href="#">Pantalones</a></li>
+                        <li><a href="#">Buzos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slogan -->
+
+    <section class="slogan">
+        <h2>"Vestite oscuro, vestite distinto."</h2>
+    </section>
+
+    <!-- Carrusel -->
+    <section class="carousel">
+        <div class="crow crow-left">
+            <img src="assets/Cuervo.png" alt="Cuervo izquierdo" />
+        </div>
+
+        <div class="carousel-container">
+            <div class="slides">
+                <img src="/assets/AURA.jpg" class="active" />
+                <img src="/assets/Aura3.jpg" />
+                <img src="/assets/Flow.jpg" />
+                <img src="/assets/Tupac.jpg" />
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <div class="crow crow-right">
+            <img src="assets/Cuervo.png" alt="Cuervo derecho" />
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="catalogo">
+        <h2>Catálogo</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="/assets/Campera1.jpg" alt="" />
+                <h3>Remera Vintage</h3>
+                <p>$3.000</p>
+                <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="3000">
+                    Comprar
+                </button>
+            </div>
+            <div class="producto">
+                <img src="/assets/Campera1.jpg" alt="" />
+                <h3>Jean Clásico</h3>
+                <p>$5.200</p>
+                <button class="btn-comprar" data-nombre="Jean Clasico" data-precio="5200">
+                    Comprar
+                </button>
+            </div>
+            <div class="producto">
+                <img src="/assets/Campera1.jpg" alt="" />
+                <h3>Buzo Oversize</h3>
+                <p>$4.500</p>
+                <button class="btn-comprar" data-nombre="Buzo Oversize" data-precio="4500">
+                    Comprar
+                </button>
+            </div>
+            <div class="producto">
+                <img src="/assets/Campera1.jpg" alt="" />
+                <h3>Remera Chicago</h3>
+                <p>$3.000</p>
+                <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="20000">
+                    Comprar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Raven Vintage. Estilo original.</p>
+    </footer>
+
+    <script src="/funciones/script.js"></script>
+</body>
+
+</html>

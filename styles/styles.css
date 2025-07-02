@@ -1,0 +1,268 @@
+:root {
+  --color-principal: #121212;
+  --color-secundario: #1e1e1e;
+  --color-terciario: #1f1f1f;
+  --color-fuentes: #cac9c9;
+  --color--cards: #8b8181;
+  --color-textoCards: #000000;
+  --color-hover: #333;
+  --Fuente-principal: 'Montserrat', sans-serif;
+  --Fuente-secundaria: 'Playfair Display', serif;
+}
+
+
+
+body {
+  margin: 0;
+  background-color: var(--color-principal);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background: var(--color-secundario);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin: 0;
+}
+
+
+/* Carrito */
+
+.btn-carrito {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 100;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.2s ease;
+}
+
+.btn-carrito:hover {
+  transform: scale(1.2);
+}
+
+.btn-carrito img {
+  width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: var(--color-fuentes);
+  text-decoration: none;
+}
+
+nav ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: var(--color-secundario);
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+nav ul li:hover .submenu {
+  display: flex;
+}
+
+/* Carrousel */
+
+
+.carousel-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.carousel .slides img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel .slides img.active {
+  display: block;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 30, 30, 0);
+  color: var(--color-fuentes);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+
+/* Cuervo */
+
+.crow {
+  width: 150px;
+  height: auto;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.crow img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(10px 10px 20px rgba(255, 255, 255, 0.5));
+}
+
+.crow-left {
+  transform: scaleX(-1);
+  margin-right: 20px;
+}
+
+.crow-right {
+  margin-left: 20px;
+}
+
+/* Slogan */
+
+.slogan {
+  text-align: center;
+  padding: 40px 20px 0;
+  background-color: #121212;
+}
+
+.slogan h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--color-fuentes);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 0 0 6px rgba(255, 11, 11, 0.05);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .slogan h2 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
+  background-color: #121212;
+}
+
+.catalogo {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--color-secundario);
+}
+
+.catalogo h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.producto {
+  background: var(--color--cards);
+  border: 2px solid #000000;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 18px;
+  color: var(--color-textoCards);
+  margin: 0 0 5px;
+}
+
+.producto p {
+  font-size: 16px;
+  color: var(--color-textoCards);
+  margin: 0;
+}
+
+.btn-comprar {
+  background-color: var(--color-principal);
+  color: var(--color-fuentes);
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--color-secundario)
+}
+
+footer {
+  background: #111;
+  color: #777;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}

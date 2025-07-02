@@ -1,0 +1,72 @@
+:root {
+  --color-principal: #121212;
+  --color-secundario: #1e1e1e;
+  --color-terciario: #1f1f1f;
+  --color-fuentes: #cac9c9;
+  --color--cards: #8b8181;
+  --color-textoCards: #000000;
+  --color-hover: #333;
+  --Fuente-principal: 'Montserrat', sans-serif;
+  --Fuente-secundaria: 'Playfair Display', serif;
+}
+
+
+body {
+      background-color: var(--color-principal);
+      color: var(--color-fuentes);
+      font-family: var(--Fuente-secundaria);
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+
+  
+.btn-volver {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-family: var(--Fuente-secundaria);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}  
+
+    .carrito-item {
+      background: #1e1e1e;
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #333;
+    }
+
+    .total {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .btn-vaciar {
+      display: block;
+      margin: 30px auto 0;
+      padding: 10px 20px;
+      background: var(--color--cards);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-vaciar:hover {
+      background: #cc003d;
+    }
