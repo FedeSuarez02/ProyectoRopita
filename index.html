@@ -10,100 +10,247 @@
         rel="stylesheet" />
 </head>
 
-<body>
     <header>
-        <h1>Raven Vintage</h1>
-        <nav>
-            <ul>
-                <a href="carrito.html" class="btn-carrito">
-                    <img src="/assets/Carrito (2).png" alt="Carrito" />
-                </a>
-                <li><a href="#">Inicio</a></li>
-                <li class="dropdown">
-                    <a href="#">Productos ▾</a>
-                    <ul class="submenu">
-                        <li><a href="#">Remeras</a></li>
-                        <li><a href="#">Pantalones</a></li>
-                        <li><a href="#">Buzos</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contacto</a></li>
+        <!-- Botones -->
+        <div class="barra-usuario">
+            <a href="#" onclick="abrirLogin()">Iniciar sesión</a>
+            <span style="color: #666">|</span>
+            <a href="#" onclick="abrirRegistro()">Crear cuenta</a>
+        </div>
+
+        <!-- MODAL: INICIAR SESIÓN -->
+        <div id="modal-login" class="modal">
+            <div class="modal-box">
+                <span class="cerrar" onclick="cerrarModales()">×</span>
+                <h2>Iniciar sesión</h2>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Contraseña" />
+                <button>INGRESAR</button>
+            </div>
+        </div>
+
+       <div id="modal-registro" class="modal">
+  <div class="modal-box">
+    <span class="cerrar" onclick="cerrarModales()">×</span>
+    <h2>Crear cuenta</h2>
+
+    <div class="form-doble">
+      <div>
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre" />
+      </div>
+      <div>
+        <label>Apellido</label>
+        <input type="text" placeholder="Tu apellido" />
+      </div>
+    </div>
+
+    <label>Email</label>
+    <input type="email" placeholder="Tu correo electrónico" />
+
+    <label>Teléfono (opcional)</label>
+    <input type="tel" placeholder="Ej: +54 9 11 1234 5678" />
+
+    <div class="form-doble">
+      <div>
+        <label>Contraseña</label>
+        <input type="password" placeholder="••••••••" />
+      </div>
+      <div>
+        <label>Repetir contraseña</label>
+        <input type="password" placeholder="••••••••" />
+      </div>
+    </div>
+
+    <button>REGISTRARME</button>
+  </div>
+</div>
+
+
+
+
+<h1>Raven Vintage</h1>
+
+<nav>
+    <ul>
+        <a href="carrito.html" class="btn-carrito">
+            <img src="/assets/Carrito (2).png" alt="Carrito" />
+        </a>
+        <li><a href="#">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#">Catálogo ▾</a>
+            <ul class="submenu">
+                <li><a href="#">Remeras</a></li>
+                <li><a href="#">Pantalones</a></li>
+                <li><a href="#">Buzos</a></li>
             </ul>
-        </nav>
-    </header>
+        </li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+</header>
 
-    <!-- Slogan -->
+<body>
+    
 
-    <section class="slogan">
-        <h2>"Vestite oscuro, vestite distinto."</h2>
-    </section>
 
-    <!-- Carrusel -->
-    <section class="carousel">
-        <div class="crow crow-left">
-            <img src="assets/Cuervo.png" alt="Cuervo izquierdo" />
+<!-- Slogan -->
+
+<section class="slogan">
+    <h2>"Vestite oscuro, vestite distinto."</h2>
+</section>
+
+<!-- Carrusel -->
+<section class="carousel">
+    <div class="crow crow-left">
+        <img src="assets/Cuervo.png" alt="Cuervo izquierdo" />
+    </div>
+
+    <div class="carousel-container">
+        <div class="slides">
+            <img src="/assets/AURA.jpg" class="active" />
+            <img src="/assets/Aura3.jpg" />
+            <img src="/assets/Flow.jpg" />
+            <img src="/assets/Tupac.jpg" />
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <div class="crow crow-right">
+        <img src="assets/Cuervo.png" alt="Cuervo derecho" />
+    </div>
+</section>
+
+<!-- Catálogo -->
+<section class="catalogo">
+    <h2>Catálogo</h2>
+    <div class="productos">
+        <div class="producto">
+            <img src="/assets/Campera1.jpg" alt="" />
+            <h3>Remera Vintage</h3>
+            <p>$3.000</p>
+            <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="3000">
+                Comprar
+            </button>
+        </div>
+        <div class="producto">
+            <img src="/assets/Campera1.jpg" alt="" />
+            <h3>Jean Clásico</h3>
+            <p>$5.200</p>
+            <button class="btn-comprar" data-nombre="Jean Clasico" data-precio="5200">
+                Comprar
+            </button>
+        </div>
+        <div class="producto">
+            <img src="/assets/Campera1.jpg" alt="" />
+            <h3>Buzo Oversize</h3>
+            <p>$4.500</p>
+            <button class="btn-comprar" data-nombre="Buzo Oversize" data-precio="4500">
+                Comprar
+            </button>
+        </div>
+        <div class="producto">
+            <img src="/assets/Campera1.jpg" alt="" />
+            <h3>Remera Chicago</h3>
+            <p>$3.000</p>
+            <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="20000">
+                Comprar
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer style="
+        background-color: #111;
+        color: #ccc;
+        padding: 40px 20px;
+        margin-top: 50px;
+      ">
+    <div style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          text-align: center;
+        ">
+        <!-- Redes sociales -->
+        <div style="margin: 15px">
+            <h3 style="color: white">Redes</h3>
+            <a href="https://www.instagram.com/" target="_blank" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">
+                📸 Instagram
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">
+                🎵 TikTok
+            </a>
+            <a href="https://wa.me/5491112345678" target="_blank" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">
+                💬 WhatsApp
+            </a>
         </div>
 
-        <div class="carousel-container">
-            <div class="slides">
-                <img src="/assets/AURA.jpg" class="active" />
-                <img src="/assets/Aura3.jpg" />
-                <img src="/assets/Flow.jpg" />
-                <img src="/assets/Tupac.jpg" />
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+        <!-- Enlaces rápidos -->
+        <div style="margin: 15px">
+            <h3 style="color: white">Navegación</h3>
+            <a href="/" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">Inicio</a>
+            <a href="/catalogo" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">Catálogo</a>
+            <a href="/contacto" style="
+              color: #ccc;
+              text-decoration: none;
+              display: block;
+              margin: 5px;
+            ">Contacto</a>
         </div>
 
-        <div class="crow crow-right">
-            <img src="assets/Cuervo.png" alt="Cuervo derecho" />
+        <!-- Contacto -->
+        <div style="margin: 15px">
+            <h3 style="color: white">Contacto</h3>
+            <p style="margin: 5px">📍 Buenos Aires, Argentina</p>
+            <p style="margin: 5px">✉️ ravenvintage@gmail.com</p>
+            <p style="margin: 5px">📞 +54 9 11 1234 5678</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Catálogo -->
-    <section class="catalogo">
-        <h2>Catálogo</h2>
-        <div class="productos">
-            <div class="producto">
-                <img src="/assets/Campera1.jpg" alt="" />
-                <h3>Remera Vintage</h3>
-                <p>$3.000</p>
-                <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="3000">
-                    Comprar
-                </button>
-            </div>
-            <div class="producto">
-                <img src="/assets/Campera1.jpg" alt="" />
-                <h3>Jean Clásico</h3>
-                <p>$5.200</p>
-                <button class="btn-comprar" data-nombre="Jean Clasico" data-precio="5200">
-                    Comprar
-                </button>
-            </div>
-            <div class="producto">
-                <img src="/assets/Campera1.jpg" alt="" />
-                <h3>Buzo Oversize</h3>
-                <p>$4.500</p>
-                <button class="btn-comprar" data-nombre="Buzo Oversize" data-precio="4500">
-                    Comprar
-                </button>
-            </div>
-            <div class="producto">
-                <img src="/assets/Campera1.jpg" alt="" />
-                <h3>Remera Chicago</h3>
-                <p>$3.000</p>
-                <button class="btn-comprar" data-nombre="Remera Vintage" data-precio="20000">
-                    Comprar
-                </button>
-            </div>
-        </div>
-    </section>
+    <!-- Copyright -->
+    <div style="
+          text-align: center;
+          border-top: 1px solid #444;
+          margin-top: 30px;
+          padding-top: 15px;
+          font-size: 14px;
+        ">
+        © 2025 Raven Vintage. Todos los derechos reservados.
+    </div>
+</footer>
 
-    <footer>
-        <p>© 2025 Raven Vintage. Estilo original.</p>
-    </footer>
+<script src="/funciones/script.js"></script>
+<script src="/funciones/carrito.js"></script>
+<script src="/funciones/registro.js"></script>
 
-    <script src="/funciones/script.js"></script>
 </body>
+
 
 </html>
